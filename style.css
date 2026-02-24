@@ -55,6 +55,7 @@ body {
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s, box-shadow 0.3s ease;
+    position: relative;
 }
 
 .CajaProducto:hover {
@@ -83,6 +84,21 @@ body {
     background-color: #7a9bb0;
 }
 
+.InsigniaEleccion {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    
+    background-color: #e74c3c; 
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    display: inline-block; 
+}
+
 .Precio {
     color: #27ae60;
     font-weight: bold;
@@ -90,9 +106,32 @@ body {
     margin-bottom: 15px;
 }
 
+.DescripcionBloque {
+    display: block; 
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-bottom: 15px;
+}
+
+.TextoInline {
+    display: inline; 
+    color: #2c3e50;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-decoration: underline;
+}
+
+.AgotadoOculto {
+    display: none; 
+    color: red;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
 #LogoEva {
     height: 60px;
     width: auto;
+    animation: aparecerSuave 1.5s ease-out;
 }
 
 #Menu {
@@ -109,6 +148,17 @@ body {
 
 #Menu a:hover {
     color: #27ae60; 
+}
+
+@keyframes aparecerSuave {
+    0%{
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 @media (max-width: 768px) {
